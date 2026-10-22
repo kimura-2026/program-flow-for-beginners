@@ -7,7 +7,13 @@ Manten esta forma: const answer = `...`; module.exports = answer.trim();
 */
 const answer = `
 flowchart TD
-    A[start] --> B[end]
+   A[Inicio] --> B[total = 0]
+    B --> C{¿Más artículos?}
+    C -->|Sí| D[Leer precio]
+    D --> E[total = total + precio]
+    E --> C
+    C -->|No| F[Mostrar total]
+    F --> G[Fin]
 `;
 
 module.exports = answer.trim();

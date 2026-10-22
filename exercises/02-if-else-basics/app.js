@@ -11,7 +11,12 @@ Manten esta forma: const answer = `...`; module.exports = answer.trim();
 
 const answer = `
 flowchart TD
-    A[start] --> B[end]
+    A[Inicio] --> B[Pedir edad]
+    B --> C{¿Edad >= 18?}
+    C -->|Sí| D[Puede beber]
+    C -->|No| E[No puede beber]
+    D --> F[Fin]
+    E --> F
 `;
 
 // Do not modify this
